@@ -1,9 +1,11 @@
-### Traffic Sign Classification in Czech Republic
+### Traffic Sign Classification in the Czech Republic
 
 This project focuses on the *classification of traffic signs* in the **Czech Republic** using *machine learning techniques*.
 
 * **Dataset**:
-  The dataset comprises images collected through various sources, including personal captures near locations like universities, Billa, Kaufland, and street views of the Ceske Budejovice area. With approximately 800 images initially captured, the dataset was filtered and cleaned, resulting in 569 samples representing 26 different classes.
+  The dataset comprises images collected through various sources, including personal captures near locations like universities, Billa, Kaufland, and street views of the Ceske Budejovice area. With approximately 800 images initially captured, the dataset was filtered and cleaned, resulting in 569 samples representing 26 different classes. 
+The Cropped, Augmented, and generated models data can be accessed by requesting access to [this Google drive]([link_to_google_drive](https://drive.google.com/drive/folders/1U5eXqi9j8QKrdgV8lbnB_c6-M0msUTr8?usp=sharing)) and short message why it is required, preferably in one line. Alternatively, you can send an email to [ank.rawat28@gmail.com](mailto:ank.rawat28@gmail.com).
+ 
 
 * **Data Preparation**:
   To ensure accurate labeling, *Wikipedia* was utilized as a reference for naming each class. Subsequently, the dataset underwent preprocessing, including balancing the sample counts across classes through image augmentation techniques.
@@ -59,7 +61,7 @@ final_data = "final_csv.csv"
 
 ### Dataset
 
-The dataset comprises approximately **800 images** collected from various sources, including personal captures near university, Billa, Kaufland, and street views of the Ceske Budejovice area. During the data filtering and cleaning process, **569 samples** representing **26 different classes** were selected. For accurate labeling, the [LabelMe tool](https://github.com/labelmeai/labelme) was utilized. Additionally, *Wikipedia* serves as a reference for class naming.
+The dataset comprises approximately **800 images** collected from various sources, including personal captures near the university, Billa, Kaufland, and street views of the Ceske Budejovice area. During the data filtering and cleaning process, **569 samples** representing **26 different classes** were selected. For accurate labeling, the [LabelMe tool](https://github.com/labelmeai/labelme) was utilized. Additionally, *Wikipedia* serves as a reference for class naming.
 [Wikipedia Link](https://en.wikipedia.org/wiki/Road_signs_in_the_Czech_Republic)
 
 
@@ -210,7 +212,7 @@ print(counts)
 
 ### Addressing Class Imbalance through Data Augmentation
 
-Class imbalance, as observed in the initial class count analysis, can significantly impact the performance of machine learning models, leading to *biased predictions* and *reduced accuracy*, especially for minority classes. To mitigate this issue, data augmentation technique is used.
+Class imbalance, as observed in the initial class count analysis, can significantly impact the performance of machine learning models, leading to *biased predictions* and *reduced accuracy*, especially for minority classes. To mitigate this issue, a data augmentation technique is used.
 
 ---
 
@@ -235,7 +237,7 @@ def augmentation(path):
 
 ```
 
-The objective is to equalize the number of samples across different classes while simultaneously saving the augmented images and updating the input dataframe for future use.
+The objective is to equalize the number of samples across different classes while simultaneously saving the augmented images and updating the input data frame for future use.
 
 **Total Images Generated:** 593
 
@@ -306,7 +308,7 @@ plt.show()
 
 
     
-![png](output_16_0.png)
+![Count Plot](images/output_16_0.png)
     
 
 
@@ -600,12 +602,12 @@ plt.show()
 
 
     
-![png](output_35_0.png)
+![Training Evaluation Graph](images/output_35_0.png)
     
 
 
 #### Testing on unseen data
-Testing model on unseen images and saving results in new directory with bounding boxes, actual class name and predicted class name.
+Testing model on unseen images and saving results in a new directory with bounding boxes, actual class name, and predicted class name.
 
 
 ```python
@@ -997,7 +999,7 @@ plt.show()
 
 
     
-![png](output_39_2.png)
+![Sample Output](images/output_39_2.png)
     
 
 
@@ -1006,9 +1008,9 @@ plt.show()
 **RESNET Model:**
 The second mode created is based on the **ResNet50**, a variant of the ResNet architecture. ResNet50 is a deep convolutional neural network consisting of 50 layers, including convolutional layers, pooling layers, and fully connected layers. It was introduced by Kaiming He et al. in their seminal paper ["Deep Residual Learning for Image Recognition"](https://arxiv.org/abs/1512.03385).
 
-- ResNet50 is pretrained on the **ImageNet** dataset, which contains millions of labeled images across thousands of classes. By leveraging **transfer learning**, this pretrained model can be fine-tuned for specific tasks with relatively small amounts of labeled data.
+- ResNet50 is pre-trained on the **ImageNet** dataset, which contains millions of labeled images across thousands of classes. By leveraging **transfer learning**, this pre-trained model can be fine-tuned for specific tasks with relatively small amounts of labeled data.
 
-- In the provided code, **ResNet50** is used as a **feature extractor**. The pretrained **ResNet50** model is loaded, and its weights are frozen, preventing them from being updated during training. This approach allows the model to leverage the learned representations from **ImageNet** while adapting to a new task. 
+- In the provided code, **ResNet50** is used as a **feature extractor**. The trained **ResNet50** model is loaded, and its weights are frozen, preventing them from being updated during training. This approach allows the model to leverage the learned representations from **ImageNet** while adapting to a new task. 
 
 - The fully connected layers added on top of the **ResNet50** base consist of a global average pooling layer followed by a dense layer with ReLU activation and another dense layer with softmax activation, which outputs the predicted class probabilities.
 
@@ -1181,7 +1183,7 @@ plt.show()
 
 
     
-![png](output_52_0.png)
+![Training Evaluation Graph](images/output_52_0.png)
     
 
 
@@ -1191,7 +1193,7 @@ plt.show()
 ```
 
 #### Testing on unseen data
-Testing model on unseen images and saving results in new directory with bounding boxes, actual class name and predicted class name.
+Testing model on unseen images and saving results in a new directory with bounding boxes, actual class name, and predicted class name.
 
 
 ```python
@@ -1588,7 +1590,7 @@ plt.show()
 
 
     
-![png](output_58_2.png)
+![Sample Output](images/output_58_2.png)
     
 
 
