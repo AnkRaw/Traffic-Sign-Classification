@@ -2,6 +2,8 @@
 
 This project focuses on the *classification of traffic signs* in the **Czech Republic** using *machine learning techniques*.
 
+![Cover photo](images/cover.png)
+
 * **Dataset**:
   The dataset comprises images collected through various sources, including personal captures near locations like universities, Billa, Kaufland, and street views of the Ceske Budejovice area. With approximately 800 images initially captured, the dataset was filtered and cleaned, resulting in 569 samples representing 26 different classes. 
 The Cropped, Augmented, and generated models data can be accessed by requesting access to [this Google drive]([link_to_google_drive](https://drive.google.com/drive/folders/1U5eXqi9j8QKrdgV8lbnB_c6-M0msUTr8?usp=sharing)) and short message why it is required, preferably in one line. Alternatively, you can send an email to [ank.rawat28@gmail.com](mailto:ank.rawat28@gmail.com).
